@@ -1,8 +1,8 @@
 import { IUser } from '@/interfaces/user.interface';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '@services/user.service';
-import { UserComponent } from "../user/user.component";
 import { CommonModule } from '@angular/common';
+import { UserComponent } from '../user/user.component';
 
 @Component({
   selector: 'app-users',

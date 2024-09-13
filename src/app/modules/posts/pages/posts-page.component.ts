@@ -1,4 +1,4 @@
-import { PostsComponent } from '@/components/posts/posts.component';
+import { PostsComponent } from '@/modules/posts/components/posts/posts.component';
 import { Component } from '@angular/core';
 
 @Component({
