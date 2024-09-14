@@ -1,7 +1,7 @@
 import { IPost } from '@/interfaces/post.inteface';
-import { PostsService } from '@/services/posts.service';
+import { PostsService } from '@/services/posts/posts.service';
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-posts',
@@ -10,11 +10,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.css',
 })
-export class PostsComponent implements OnInit {
-  posts: IPost[];
-  constructor(private postService: PostsService) {}
+export class PostsComponent {
+  @Input() posts: IPost[];
 
-  ngOnInit(): void {
-    this.postService.getAll().subscribe((data) => (this.posts = data));
-  }
 }
